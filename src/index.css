@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: #3366cc;
+    color: white;
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-4;
+    letter-spacing: -0.04em;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-500;
+    letter-spacing: 0.02em;
+  }
+
+  .card-title {
+    @apply text-2xl font-semibold mb-3;
+    letter-spacing: -0.02em;
+  }
+
+  .card-description {
+    @apply text-lg text-gray-600;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+  }
+
+  .grid-layout {
+    @apply grid grid-cols-1 md:grid-cols-[240px,1fr] lg:grid-cols-[320px,1fr] gap-8 md:gap-12 lg:gap-24;
+  }
+
+  .section-spacing {
+    @apply py-32 md:py-40 lg:py-48;
+  }
+
+  .container-spacing {
+    @apply px-8 md:px-12 lg:px-20;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .heading-highlight {
+    @apply relative inline-block;
+  }
+
+  .heading-highlight::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[0.15em] bg-[#3366cc] transform scale-x-0 transition-transform duration-300 origin-left;
+  }
+
+  .heading-highlight:hover::after {
+    @apply scale-x-100;
+  }
+}
