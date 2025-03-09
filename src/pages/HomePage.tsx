@@ -18,17 +18,9 @@ const artLove5 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/
 const artPunishment = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/punishment_apxwd2.png';
 const artWindBlowing = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/wind_blowing_fresh_verdure_peh1eh.png';
 const webDesignPhoto1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442776/web_design_photo1_nfwp35.png';
-// const webDesign1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
 const webDesign1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490752/tax_consulting_landing_page__1-1_xhobtj.png';
 const webDesign2 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490751/tax_consulting_landing_page__2-1_smlomh.png';
 const webDesign3 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490750/tax_consulting_landing_page__3-1_ggl3ul.png';
-// const webDesign4 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
-// const webDesign5 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
-// const webDesign6 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
-// const webDesign7 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
-// const webDesign8 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
-// const webDesign9 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
-// const webDesign10 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
 const bannerPhoto = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442775/banner_photo_qseuqf.png';
 const aiAssistant = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442775/artpass1_x5fgei.png';
 const artpassDesign1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741497794/artpass__1-1_ttifjn.png';
@@ -76,7 +68,7 @@ export function HomePage() {
         image: aiAnalytics1,
         modalImage: [taxConsultingDesign1, taxConsultingDesign2, taxConsultingDesign3],
         details: [
-          <a href="https://tax-consulting-landing-page.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://tax-consulting-landing-page.vercel.app/</a>,
+          <a href="https://www.tax-consulting-landing-pag.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://www.tax-consulting-landing-pag.com/</a>,
           "信頼性を高める数値データと社会的証明の戦略的配置",
           "コンバージョン率向上のためのCTAボタン設計と特典訴求",
           "不動産投資の専門性と価値を伝える情報の階層構造化",
