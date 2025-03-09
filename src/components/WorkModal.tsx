@@ -1,20 +1,31 @@
 import { X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
+interface Work {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  image: string;
+  details?: (string | JSX.Element)[];
+  technologies?: string[];
+  modalImage?: string[];
+}
 
 interface WorkModalProps {
   isOpen: boolean;
   onClose: () => void;
-  work: {
-    title: string;
-    subtitle?: string;
-    description?: string;
-    image: string;
-    modalImage?: string[];
-    details?: string[];
-    technologies?: string[];
-  } | null;
+  work: Work | null;
 }
 
 export function WorkModal({ isOpen, onClose, work }: WorkModalProps) {
+  const [showDesigns, setShowDesigns] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setShowDesigns(false);
+    }
+  }, [isOpen]);
+
   if (!isOpen || !work) return null;
 
   return (
@@ -28,12 +39,12 @@ export function WorkModal({ isOpen, onClose, work }: WorkModalProps) {
             <div>
               <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wider">{work.title}</h3>
               {work.subtitle && (
-                <p className="text-base md:text-lg lg:text-xl text-gray-500 mt-2 md:mt-4 lg:mt-6 tracking-wider">{work.subtitle}</p>
+                <p className="text-base md:text-lg lg:text-xl text-gray-500 mt-2 md:mt-3 lg:mt-4 tracking-wider">{work.subtitle}</p>
               )}
             </div>
             <button 
               onClick={onClose}
-              className="p-2 md:p-3 lg:p-5 hover:bg-gray-100 rounded-full transition-colors -mt-2 md:mt-0"
+              className="p-2 md:p-3 lg:p-4 hover:bg-gray-100 rounded-full transition-colors -mt-2 md:mt-0"
             >
               <X className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
             </button>
@@ -41,67 +52,80 @@ export function WorkModal({ isOpen, onClose, work }: WorkModalProps) {
         </div>
         
         <div className="flex-1 overflow-y-auto">
-          <div className="container px-6 py-8 md:px-12 lg:px-20 md:py-12 lg:py-20">
-            <div className="overflow-hidden rounded-lg md:rounded-xl mb-8 md:mb-16 lg:mb-24 bg-white">
-              {work.modalImage ? (
-                <div className="flex flex-col">
-                  {work.modalImage.map((img, index) => (
-                    <img 
-                      key={index}
-                      src={img} 
-                      alt={`${work.title} ${index + 1}`}
-                      className="w-full"
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className="aspect-[16/9]">
+          <div className="container px-6 py-4 md:px-12 lg:px-20 md:py-4 lg:py-6">
+            <div className="overflow-hidden rounded-lg md:rounded-xl mb-4 md:mb-6 lg:mb-8 bg-white">
+              <div className="max-w-xl mx-auto">
+                <div className="aspect-[16/10]">
                   <img 
                     src={work.image} 
                     alt={work.title}
-                    className="w-full h-full object-contain p-4"
+                    className="w-full h-full object-contain p-2"
                   />
                 </div>
-              )}
+              </div>
             </div>
+
+            {work.modalImage && work.modalImage.length > 0 && (
+              <div className="mb-4 md:mb-6 lg:mb-8">
+                <button
+                  onClick={() => setShowDesigns(!showDesigns)}
+                  className="w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg text-base font-medium tracking-wider"
+                >
+                  {showDesigns ? 'デザイン一覧を閉じる' : 'デザイン一覧を見る'}
+                </button>
+                {showDesigns && (
+                  <div className="mt-4">
+                    {work.modalImage.map((img, index) => (
+                      <div key={index} className="overflow-hidden max-w-xl mx-auto">
+                        <img 
+                          src={img} 
+                          alt={`${work.title} デザイン ${index + 1}`}
+                          className="w-full"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
             
             {(work.description || work.details || work.technologies) && (
-              <div className="space-y-12 md:space-y-16 lg:space-y-24">
+              <div className="space-y-6 md:space-y-8 lg:space-y-12">
                 {work.description && (
-                  <div className="grid grid-cols-1 md:grid-cols-[240px,1fr] lg:grid-cols-[320px,1fr] gap-4 md:gap-12 lg:gap-24">
+                  <div className="grid grid-cols-1 md:grid-cols-[200px,1fr] lg:grid-cols-[240px,1fr] gap-4 md:gap-8 lg:gap-12">
                     <div>
-                      <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-3 lg:mb-4 tracking-wider">概要</h4>
-                      <span className="text-base md:text-lg text-gray-500 tracking-widest">Overview</span>
+                      <h4 className="text-lg md:text-xl lg:text-2xl font-bold mb-1 md:mb-2 lg:mb-3 tracking-wider">概要</h4>
+                      <span className="text-sm md:text-base text-gray-500 tracking-widest">Overview</span>
                     </div>
-                    <p className="text-base md:text-lg lg:text-xl text-[#333333] leading-[2.5] md:leading-[2.5] lg:leading-[2.5] tracking-wider text-justify">{work.description}</p>
+                    <p className="text-sm md:text-base lg:text-lg text-[#333333] leading-[2] md:leading-[2] lg:leading-[2] mt-20 tracking-wider text-justify">{work.description}</p>
                   </div>
                 )}
 
                 {work.details && work.details.length > 0 && (
-                  <div className="grid grid-cols-1 md:grid-cols-[240px,1fr] lg:grid-cols-[320px,1fr] gap-4 md:gap-12 lg:gap-24">
+                  <div className="grid grid-cols-1 md:grid-cols-[200px,1fr] lg:grid-cols-[240px,1fr] gap-4 md:gap-8 lg:gap-12">
                     <div>
-                      <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-3 lg:mb-4 tracking-wider">詳細</h4>
-                      <span className="text-base md:text-lg text-gray-500 tracking-widest">Details</span>
+                      <h4 className="text-lg md:text-xl lg:text-2xl font-bold mb-1 md:mb-2 lg:mb-3 tracking-wider">詳細</h4>
+                      <span className="text-sm md:text-base text-gray-500 tracking-widest">Details</span>
                     </div>
-                    <ul className="space-y-4 md:space-y-6 lg:space-y-10">
+                    <ul className="space-y-3 md:space-y-4 lg:space-y-6">
                       {work.details.map((detail, index) => (
-                        <li key={index} className="text-base md:text-lg lg:text-xl text-[#333333] leading-[2.5] md:leading-[2.5] lg:leading-[2.5] tracking-wider">{detail}</li>
+                        <li key={index} className="text-sm md:text-base lg:text-lg text-[#333333] leading-[2] md:leading-[2] lg:leading-[2] mt-20 tracking-wider">{detail}</li>
                       ))}
                     </ul>
                   </div>
                 )}
 
                 {work.technologies && work.technologies.length > 0 && (
-                  <div className="grid grid-cols-1 md:grid-cols-[240px,1fr] lg:grid-cols-[320px,1fr] gap-4 md:gap-12 lg:gap-24">
+                  <div className="grid grid-cols-1 md:grid-cols-[200px,1fr] lg:grid-cols-[240px,1fr] gap-4 md:gap-8 lg:gap-12">
                     <div>
-                      <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-3 lg:mb-4">使用技術</h4>
-                      <span className="text-base md:text-lg text-gray-500">Technologies</span>
+                      <h4 className="text-lg md:text-xl lg:text-2xl font-bold mb-1 md:mb-2 lg:mb-3 tracking-wider">使用技術</h4>
+                      <span className="text-sm md:text-base text-gray-500 tracking-widest">Technologies</span>
                     </div>
-                    <div className="flex flex-wrap gap-2 md:gap-3 lg:gap-5">
+                    <div className="flex flex-wrap gap-2 md:gap-3">
                       {work.technologies.map((tech, index) => (
                         <span 
                           key={index}
-                          className="px-4 py-2 md:px-6 md:py-3 lg:px-10 lg:py-5 bg-gray-100 text-[#333333] rounded-lg text-sm md:text-base lg:text-lg"
+                          className="px-3 py-1 md:px-4 md:py-2 lg:px-6 lg:py-3 bg-gray-100 text-[#333333] rounded-lg text-xs md:text-sm lg:text-base mt-20 tracking-wider"
                         >
                           {tech}
                         </span>

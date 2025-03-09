@@ -7,79 +7,44 @@ interface StaticImageData {
   width: number;
 }
 
-const namecardFront = '/images/graphic_design/business_card1.png';
-const namecardBack = '/images/graphic_design/business_card2.png';
-const logoPhoto = '/images/graphic_design/logo_photo.png';
-const flyerPhoto = '/images/graphic_design/flyer_photo.png';
-const adPhoto = '/images/graphic_design/ad_photo.png';
-const profilePhoto = '/images/profile/profile_photo.png';
-const artLove = '/images/art/love.png';
-const artLove5 = '/images/art/love5.png';
-const artPunishment = '/images/art/punishment.png';
-const artWindBlowing = '/images/art/wind_blowing_fresh_verdure.png';
-const webDesignPhoto1 = '/images/web_design/web_design_photo1.png';
-const webDesign1 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(1-1).png';
-const webDesign2 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(2-1).png';
-const webDesign3 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(3-1).png';
-const webDesign4 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(4-1).png';
-const webDesign5 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(5-1).png';
-const webDesign6 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(6-1).png';
-const webDesign7 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(7-1).png';
-const webDesign8 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(8-1).png';
-const webDesign9 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(9-1).png';
-const webDesign10 = '/images/web_design/web_design_photo_segmentation/web_design_photo.png_(1360x1092)_(10-1).png';
-const bannerPhoto = '/images/web_design/banner_photo.png';
-const aiAssistant1 = '/images/ai_development/artpass1.png';
-const aiAssistant2 = '/images/ai_development/artpass2.jpg';
-const artpass1 = '/images/ai_development/artpass_segmentation/artpass_(1-1).png';
-const artpass2 = '/images/ai_development/artpass_segmentation/artpass_(2-1).png';
-const artpass3 = '/images/ai_development/artpass_segmentation/artpass_(3-1).png';
-const artpass4 = '/images/ai_development/artpass_segmentation/artpass_(4-1).png';
-const artpass5 = '/images/ai_development/artpass_segmentation/artpass_(5-1).png';
-const artpass6 = '/images/ai_development/artpass_segmentation/artpass_(6-1).png';
-const artpass7 = '/images/ai_development/artpass_segmentation/artpass_(7-1).png';
-const artpass8 = '/images/ai_development/artpass_segmentation/artpass_(8-1).png';
-const artpass9 = '/images/ai_development/artpass_segmentation/artpass_(9-1).png';
-const artpass10 = '/images/ai_development/artpass_segmentation/artpass_(10-1).png';
-const artpass11 = '/images/ai_development/artpass_segmentation/artpass_(11-1).png';
-const artpass12 = '/images/ai_development/artpass_segmentation/artpass_(12-1).png';
-const artpass13 = '/images/ai_development/artpass_segmentation/artpass_(13-1).png';
-const artpass14 = '/images/ai_development/artpass_segmentation/artpass_(14-1).png';
-const artpass15 = '/images/ai_development/artpass_segmentation/artpass_(15-1).png';
-const artpass16 = '/images/ai_development/artpass_segmentation/artpass_(16-1).png';
-const artpass17 = '/images/ai_development/artpass_segmentation/artpass_(17-1).png';
-const artpass18 = '/images/ai_development/artpass_segmentation/artpass_(18-1).png';
-const artpass19 = '/images/ai_development/artpass_segmentation/artpass_(19-1).png';
-const artpass20 = '/images/ai_development/artpass_segmentation/artpass_(20-1).png';
-
-const aiAnalytics1 = '/images/ai_development/tax_consulting_landing_page1.png';
-const taxConsulting1 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(1-1).png';
-const taxConsulting2 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(2-1).png';
-const taxConsulting3 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(3-1).png';
-const taxConsulting4 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(4-1).png';
-const taxConsulting5 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(5-1).png';
-const taxConsulting6 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(6-1).png';
-const taxConsulting7 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(7-1).png';
-const taxConsulting8 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(8-1).png';
-const taxConsulting9 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(9-1).png';
-const taxConsulting10 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(10-1).png';
-const taxConsulting11 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(11-1).png';
-const taxConsulting12 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(12-1).png';
-const taxConsulting13 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(13-1).png';
-const taxConsulting14 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(14-1).png';
-const taxConsulting15 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(15-1).png';
-const taxConsulting16 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(16-1).png';
-const taxConsulting17 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(17-1).png';
-const taxConsulting18 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(18-1).png';
-const taxConsulting19 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(19-1).png';
-const taxConsulting20 = '/images/ai_development/tax_consulting_landing_page_segmentation/tax_consulting_landing_page_(20-1).png';
+const namecardFront = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/business_card1_r4cvu9.png';
+const namecardBack = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442773/business_card2_kb2atq.png';
+const logoPhoto = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442773/logo_photo_p8fqxc.png';
+const flyerPhoto = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442771/flyer_photo_ex9jey.png';
+const adPhoto = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/ad_photo_kr8iah.png';
+const profilePhoto = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442777/profile_photo_mifcmy.jpg';
+const artLove = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/love_vmhk6b.png';
+const artLove5 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/love5_aebp2i.png';
+const artPunishment = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/punishment_apxwd2.png';
+const artWindBlowing = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442772/wind_blowing_fresh_verdure_peh1eh.png';
+const webDesignPhoto1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442776/web_design_photo1_nfwp35.png';
+// const webDesign1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+const webDesign1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490752/tax_consulting_landing_page__1-1_xhobtj.png';
+const webDesign2 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490751/tax_consulting_landing_page__2-1_smlomh.png';
+const webDesign3 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490750/tax_consulting_landing_page__3-1_ggl3ul.png';
+// const webDesign4 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+// const webDesign5 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+// const webDesign6 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+// const webDesign7 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+// const webDesign8 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+// const webDesign9 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+// const webDesign10 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741490350/web_design_photo_zkmtgg_u99dsw.png';
+const bannerPhoto = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442775/banner_photo_qseuqf.png';
+const aiAssistant = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442775/artpass1_x5fgei.png';
+const artpassDesign1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741497794/artpass__1-1_ttifjn.png';
+const artpassDesign2 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741497792/artpass__2-1_rqi4mx.png';
+const artpassDesign3 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741497792/artpass__3-1_tnhzso.png';
+const aiAnalytics1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741442774/tax_consulting_landing_page1_itnama.png';
+const taxConsultingDesign1 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741498346/tax_consulting_landing_page__1-1_gs6gy8.png';
+const taxConsultingDesign2 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741498339/tax_consulting_landing_page__2-1_ztmr3g.png';
+const taxConsultingDesign3 = 'https://res.cloudinary.com/dfrcjj3e4/image/upload/v1741498338/tax_consulting_landing_page__3-1_p3xrp3.png';
 
 interface Work {
   title: string;
   subtitle?: string;
   description?: string;
   image: StaticImageData | StaticImageData[] | string | string[];
-  details?: string[];
+  details?: (string | JSX.Element)[];
   technologies?: string[];
   modalImage?: string[];
 }
@@ -93,16 +58,10 @@ export function HomePage() {
         title: "Artpassアプリ",
         subtitle: "個人開発した複製画サブスクのArtpassアプリ",
         description: "美術作品の複製画をサブスクリプション形式で楽しめるウェブアプリケーション「ArtPass」の個人開発プロジェクト。「厳選されたアートで空間を変える」をコンセプトに、芸術作品を身近に楽しむための新しいサービスとして設計しました。会員はベーシック(¥2,900/月)、スタンダード(¥5,900/月)、プレミアム(¥9,900/月)の3つのプラン選択が可能で、定期的にアート作品を交換できるシステムを実装。ユーザーフローを「閲覧と選択」「配送」「アートを楽しむ」「いつでも交換」「お気に入り」という5ステップで視覚化し、サービスの利便性を直感的に伝えるUI/UXデザインに仕上げました。ユーザー管理からアート作品選択、プロフィール設定まで一貫したフロントエンド開発を担当し、Next.jsとVercelを活用したモダンな実装と、クリーンでミニマルなデザインを融合させたウェブアプリケーションです。",
-        image: aiAssistant1,
-        modalImage: [
-          artpass1, artpass2, artpass3, artpass4, artpass5, 
-          artpass6, artpass7, artpass8, artpass9, artpass10,
-          artpass11, artpass12, artpass13, artpass14, artpass15,
-          artpass16, artpass17, artpass18, artpass19, artpass20,
-          aiAssistant2
-        ],
+        image: aiAssistant,
+        modalImage: [artpassDesign1, artpassDesign2, artpassDesign3],
         details: [
-          "URL: https://artpass.vercel.app/",
+          <a href="https://artpass.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">URL: https://artpass.vercel.app/</a>,
           "美術複製画のサブスクリプションモデル設計と価格戦略",
           "モダンで直感的なUI/UXと芸術作品に焦点を当てたビジュアルデザイン",
           "Next.jsを用いたフロントエンド開発とVercelによるデプロイ",
@@ -115,14 +74,9 @@ export function HomePage() {
         subtitle: "個人制作した不動産セミナーのランディングページ",
         description: "不動産投資セミナーのランディングページを個人制作した作品です。「資産形成を知るためのセミナー」という明確なバリュープロポジションを掲げ、不動産投資による安定収入と資産形成を訴求しています。ヘッダー部分には都市の高層ビル群をブルーのオーバーレイで処理した印象的なビジュアルを配置し、信頼性と先進性を表現。「満足度93.3%」「参加者数500名以上」という具体的な数値を提示することで社会的証明を強化し、Amazonギフトカード特典を明示することで申し込み促進を図っています。ウルトラマンション経営のセクションでは「34年」「99.1%」「31,000戸」という実績数値と5つの強みを視覚的に整理し、サービスの信頼性を高める情報設計を実現。コンバージョン率を高めるためのボタン配色や情報の階層構造にこだわり、ユーザーを自然にセミナー申し込みへと導く戦略的なデザインに仕上げました。",
         image: aiAnalytics1,
-        modalImage: [
-          taxConsulting1, taxConsulting2, taxConsulting3, taxConsulting4, taxConsulting5,
-          taxConsulting6, taxConsulting7, taxConsulting8, taxConsulting9, taxConsulting10,
-          taxConsulting11, taxConsulting12, taxConsulting13, taxConsulting14, taxConsulting15,
-          taxConsulting16, taxConsulting17, taxConsulting18, taxConsulting19, taxConsulting20
-        ],
+        modalImage: [taxConsultingDesign1, taxConsultingDesign2, taxConsultingDesign3],
         details: [
-          "URL：https://tax-consulting-landing-page.vercel.app/",
+          <a href="https://tax-consulting-landing-page.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://tax-consulting-landing-page.vercel.app/</a>,
           "信頼性を高める数値データと社会的証明の戦略的配置",
           "コンバージョン率向上のためのCTAボタン設計と特典訴求",
           "不動産投資の専門性と価値を伝える情報の階層構造化",
@@ -138,8 +92,10 @@ export function HomePage() {
         description: "クリエイタースクール「デジタルハリウッド STUDIO by LIG」の架空ランディングページデザイン（スクール課題）。「DESIGN YOUR FUTURE SELF」という力強いキャッチコピーを中心に、キャリア構築への意欲を喚起する構成に仕上げました。オレンジゴールドを基調とした温かみのあるカラーパレットと、明るく開放的なオフィス環境の写真を効果的に配置することで、創造的な学習環境を視覚的に表現。「About」「Reason」「Course」などの明確なセクション分けと論理的な情報設計により、ユーザーの理解を段階的に深める導線を設計しています。Webデザイナーやネット動画ディレクターなどの具体的なキャリアパスを提示し、実践的なフィードバックの重要性を強調することで、教育プログラムの価値を効果的に伝えています。モバイルフレンドリーな設計と直感的なナビゲーションにより、ユーザーエクスペリエンスを最適化したデザインソリューションです。",
         image: webDesignPhoto1,
         modalImage: [
-          webDesign1, webDesign2, webDesign3, webDesign4, webDesign5,
-          webDesign6, webDesign7, webDesign8, webDesign9, webDesign10
+          webDesign1, 
+          webDesign2, webDesign3, 
+          // webDesign4, webDesign5,
+          // webDesign6, webDesign7, webDesign8, webDesign9, webDesign10
         ],
         details: [
           "ユーザーの感情に訴えかけるキャッチコピーとビジュアルの統合",
