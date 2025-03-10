@@ -68,7 +68,7 @@ export function HomePage() {
         image: aiAnalytics1,
         modalImage: [taxConsultingDesign1, taxConsultingDesign2, taxConsultingDesign3],
         details: [
-          <a href="https://www.tax-consulting-landing-pag.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://www.tax-consulting-landing-pag.com/</a>,
+          <a href="https://www.tax-consulting-landing-page.net/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://www.tax-consulting-landing-page.net/</a>,
           "信頼性を高める数値データと社会的証明の戦略的配置",
           "コンバージョン率向上のためのCTAボタン設計と特典訴求",
           "不動産投資の専門性と価値を伝える情報の階層構造化",
