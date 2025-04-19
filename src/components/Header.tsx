@@ -6,22 +6,27 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [isWorksOpen, setIsWorksOpen] = useState(location.pathname === '/');
-  const [isAboutOpen, setIsAboutOpen] = useState(location.pathname === '/about');
+  const [isWorksOpen, setIsWorksOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // ページ遷移時にトップにスクロールし、適切なプルダウンのみを表示
+  useEffect(() => {
+    // 詳細ページに遷移したときにメニューを閉じる
+    if (location.pathname.includes('/work/')) {
+      setIsWorksOpen(false);
+      setIsAboutOpen(false);
+      setIsMobileMenuOpen(false);
+    }
+  }, [location.pathname]);
+
+  // ページ遷移時にトップにスクロールし、メニューを閉じる
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    // パスに応じて適切なプルダウンのみを表示
-    if (location.pathname === '/') {
-      setIsWorksOpen(true);
-      setIsAboutOpen(false);
-    } else if (location.pathname === '/about') {
-      setIsWorksOpen(false);
-      setIsAboutOpen(true);
-    }
+    // すべてのメニューを閉じる
+    setIsWorksOpen(false);
+    setIsAboutOpen(false);
+    setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
@@ -57,8 +62,9 @@ export function Header() {
             to="/" 
             className="text-4xl font-bold tracking-widest hover:text-[#3366cc] transition-colors"
             onClick={() => {
-              setIsWorksOpen(true);
+              setIsWorksOpen(false);
               setIsAboutOpen(false);
+              setIsMobileMenuOpen(false);
             }}
           >
             RYO

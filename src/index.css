@@ -22,9 +22,8 @@
 
 @layer components {
   .container {
+    @apply mx-auto;
     max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
   }
 
   .section-title {
@@ -57,7 +56,7 @@
   }
 
   .container-spacing {
-    @apply px-8 md:px-12 lg:px-20;
+    @apply px-2 md:px-4 lg:px-6;
   }
 }
 
