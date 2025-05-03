@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Target, Code, Layout as LayoutIcon, Lightbulb, PenTool, Printer, Smartphone, Palette, LineChart } from 'lucide-react';
+import { Code, Layout as LayoutIcon, Palette, LineChart } from 'lucide-react';
 
 export function LogoDesignDetail() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,299 +35,135 @@ export function LogoDesignDetail() {
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">プロジェクト概要</h3>
           <span className="text-sm text-gray-500 tracking-widest">Overview</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Target className="w-6 h-6 text-blue-500" />
-              </div>
-              <h4 className="font-semibold">ブランドアイデンティティ</h4>
+            <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+              <LineChart className="w-6 h-6 text-indigo-600" />
             </div>
-            <div className="space-y-4">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h5 className="font-medium text-blue-800">Line Artの本質</h5>
-                <p className="text-sm text-gray-600">直線的要素の交差という視覚言語への翻訳</p>
-              </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h5 className="font-medium text-blue-800">スケーラビリティ</h5>
-                <p className="text-sm text-gray-600">汎用性を備えたブランドマークの構築</p>
-              </div>
-            </div>
+            <h4 className="font-semibold text-indigo-800">プロジェクトの目的</h4>
           </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-purple-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Palette className="w-6 h-6 text-purple-500" />
-              </div>
-              <h4 className="font-semibold">戦略的アプローチ</h4>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h5 className="font-medium text-purple-800">色彩理論</h5>
-                <p className="text-sm text-gray-600">青と赤紫の戦略的活用による視覚的インパクト</p>
-              </div>
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h5 className="font-medium text-purple-800">幾何学的均衡</h5>
-                <p className="text-sm text-gray-600">現代的で記憶に残るビジュアルアイデンティティ</p>
-              </div>
-            </div>
-          </div>
+          <p className="text-base text-gray-700 leading-relaxed text-justify">
+            「L」と「A」の文字を抽象化し、交差する線と計算された色彩のコントラストによって構成されたLine Artロゴは、西洋の抽象芸術と東洋の書道美学の融合を象徴しています。「バランス・アクト」と「ミックス・スティックス」という2024年のロゴデザイントレンドを取り入れながら、Line Artist ryoの芸術理念を視覚言語に翻訳しました。
+          </p>
         </div>
       </div>
 
-      {/* デザイン戦略とコンセプト */}
+      {/* デザインコンセプト */}
       <div className="space-y-8">
         <div className={`transform transition-all duration-300 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">デザイン戦略とコンセプト</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Design Strategy & Concept</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">デザインコンセプト</h3>
+          <span className="text-sm text-gray-500 tracking-widest">Design Concept</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <LineChart className="w-6 h-6 text-blue-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <LineChart className="w-6 h-6 text-blue-600" />
               </div>
-              <h4 className="font-semibold">シンボルの構造</h4>
+              <h4 className="font-semibold text-blue-800">文字の抽象化と線の表現</h4>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>直線の交差による視覚表現</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>文字の抽象化と幾何学的再解釈</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>空間分割と閉じた枠組み</span>
-              </li>
-            </ul>
+            <p className="text-base text-gray-700 leading-relaxed">
+              「Line Art」の「L」と「A」を強調したシンボルマークは、文字の持つ直線的要素を幾何学的に再構成しています。線の交差によって生まれる空間の緊張感は、筆の動きから生まれる東洋の書の躍動感と、西洋の構成主義的アプローチを融合させた表現です。
+            </p>
           </div>
           
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-purple-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Palette className="w-6 h-6 text-purple-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <Palette className="w-6 h-6 text-purple-600" />
               </div>
-              <h4 className="font-semibold">カラー戦略</h4>
+              <h4 className="font-semibold text-purple-800">戦略的な色彩選択</h4>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>補色に近い配色による視覚的振動</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>青の信頼性と赤紫の創造性</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>適切なコントラスト比の確保</span>
-              </li>
-            </ul>
+            <p className="text-base text-gray-700 leading-relaxed">
+              青（RGB:67, 81, 160）と赤紫（RGB:157, 49, 93）の対比は単なる美的選択ではなく、芸術的コンセプトを強化するための戦略的判断です。青の冷静さと知性、赤紫の情熱と創造性という相反する性質が一つの調和を生み出しています。
+            </p>
           </div>
           
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-indigo-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <PenTool className="w-6 h-6 text-indigo-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <LayoutIcon className="w-6 h-6 text-green-600" />
               </div>
-              <h4 className="font-semibold">タイポグラフィ</h4>
+              <h4 className="font-semibold text-green-800">余白と構造の均衡</h4>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                <span>幾何学的なサンセリフフォント</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                <span>最適化された文字間隔</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                <span>黄金比に基づく配置</span>
-              </li>
-            </ul>
+            <p className="text-base text-gray-700 leading-relaxed">
+              限られた正方形のフレーム内で線と色面が織りなす構造は、東洋の書道における「余白」の概念を現代的に解釈したものです。15°の倍数による角度設定と最小限のアンカーポイントによって、洗練された幾何学的均衡を実現しました。
+            </p>
           </div>
         </div>
       </div>
 
-      {/* 技術的実装と設計プロセス */}
+      {/* 技術的実装 */}
       <div className="space-y-8">
         <div className={`transform transition-all duration-300 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">技術的実装と設計プロセス</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Technical Implementation & Design Process</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">技術的実装</h3>
+          <span className="text-sm text-gray-500 tracking-widest">Technical Implementation</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-green-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Code className="w-6 h-6 text-green-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <Code className="w-6 h-6 text-amber-600" />
               </div>
-              <h4 className="font-semibold">ベクター構築</h4>
+              <h4 className="font-semibold text-amber-800">スケーラビリティと汎用性</h4>
             </div>
-            <div className="space-y-4">
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h5 className="font-medium text-green-800">スケーラビリティ</h5>
-                <ul className="text-sm text-gray-600 space-y-2 mt-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                    <span>あらゆるサイズ展開での鮮明さ保持</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                    <span>8x8のベースグリッドによる配置</span>
-                  </li>
-                </ul>
-                      </div>
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h5 className="font-medium text-green-800">最適化</h5>
-                <ul className="text-sm text-gray-600 space-y-2 mt-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                    <span>最小限のアンカーポイント使用</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                    <span>15°の倍数による角度設定</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-indigo-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Printer className="w-6 h-6 text-indigo-500" />
-              </div>
-              <h4 className="font-semibold">カラーシステム</h4>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-indigo-50 p-4 rounded-lg">
-                <h5 className="font-medium text-indigo-800">技術仕様</h5>
-                <ul className="text-sm text-gray-600 space-y-2 mt-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                    <span>ブルー: RGB(67, 81, 160) / HEX #4351A0</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                    <span>レッドパープル: RGB(157, 49, 93) / HEX #9D315D</span>
-                  </li>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
+                <span>8×8のベースグリッドに基づいた構築</span>
+              </li>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
+                <span>最小サイズ（印刷20mm/デジタル60px）での視認性確保</span>
+              </li>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
+                <span>多様な媒体での一貫した表示対応</span>
+              </li>
             </ul>
           </div>
-              <div className="bg-indigo-50 p-4 rounded-lg">
-                <h5 className="font-medium text-indigo-800">汎用性</h5>
-                <ul className="text-sm text-gray-600 space-y-2 mt-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                    <span>最小クリアスペース: ロゴ高さの25%</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                    <span>最小サイズ: 印刷20mm / デジタル60px</span>
-                  </li>
-                </ul>
+
+          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <Palette className="w-6 h-6 text-rose-600" />
               </div>
+              <h4 className="font-semibold text-rose-800">カラーシステムと視覚的一貫性</h4>
             </div>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2" />
+                <span>ブルー（RGB:67, 81, 160 / HEX:#4351A0）とレッドパープル（RGB:157, 49, 93 / HEX:#9D315D）の最適なコントラスト比</span>
+              </li>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2" />
+                <span>幾何学的なサンセリフフォントの採用</span>
+              </li>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2" />
+                <span>黄金比に基づく文字間隔の最適化</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      {/* PMとしての統合的アプローチ */}
+      {/* まとめ */}
       <div className="space-y-8">
         <div className={`transform transition-all duration-300 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">PMとしての統合的アプローチ</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Integrated PM Approach</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">まとめ</h3>
+          <span className="text-sm text-gray-500 tracking-widest">Summary</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Target className="w-6 h-6 text-blue-500" />
-              </div>
-              <h4 className="font-semibold">デザインシステム</h4>
+        <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+              <LayoutIcon className="w-6 h-6 text-slate-600" />
             </div>
-            <p className="text-sm text-gray-600">ロゴを起点としたビジュアルアイデンティティの体系化</p>
+            <h4 className="font-semibold text-slate-800">デザインの成果</h4>
           </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-purple-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Printer className="w-6 h-6 text-purple-500" />
-                      </div>
-              <h4 className="font-semibold">技術的実装</h4>
-                    </div>
-            <p className="text-sm text-gray-600">多様なメディアとプラットフォームでの表示最適化</p>
-                  </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-indigo-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <LayoutIcon className="w-6 h-6 text-indigo-500" />
-              </div>
-              <h4 className="font-semibold">ブランドエクイティ</h4>
-            </div>
-            <p className="text-sm text-gray-600">視覚的差別化と記憶性を高める戦略的選択</p>
-          </div>
-        </div>
-      </div>
-
-      {/* 応用展開と成果 */}
-      <div className="space-y-8">
-        <div className={`transform transition-all duration-300 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">応用展開と成果</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Applications & Results</span>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-green-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Lightbulb className="w-6 h-6 text-green-500" />
-              </div>
-              <h4 className="font-semibold">デジタル展開</h4>
-            </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>ウェブサイトとSNSアイコン</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>アプリケーションアイコン</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>デジタルマーケティング素材</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Smartphone className="w-6 h-6 text-blue-500" />
-              </div>
-              <h4 className="font-semibold">物理的展開</h4>
-            </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>名刺とレターヘッド</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>プロモーション資料</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>環境グラフィック</span>
-              </li>
-            </ul>
-          </div>
+          <p className="text-base text-gray-700 leading-relaxed text-justify">
+            このロゴデザインは、Line Artist ryoの芸術哲学である「西洋の抽象画と東洋の抽象表現の融合」を視覚的に伝えると同時に、商業的要素と芸術性を兼ね備えた実用的なシンボルとして機能します。バランスと緊張感、伝統と革新、東洋と西洋という対立概念の調和を図ることで、アーティストとしてのブランドアイデンティティを確立する重要な礎となっています。
+          </p>
         </div>
       </div>
     </div>

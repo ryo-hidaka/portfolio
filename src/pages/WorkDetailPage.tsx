@@ -150,7 +150,8 @@ export function WorkDetailPage({ works }: WorkDetailPageProps) {
               <img 
                 src={work.image} 
                 alt={work.title}
-                className="w-full h-full object-contain p-2"
+                className="w-full h-full object-contain p-2 cursor-pointer"
+                onClick={() => window.open(work.image, '_blank')}
               />
             </div>
           </div>
@@ -171,7 +172,8 @@ export function WorkDetailPage({ works }: WorkDetailPageProps) {
                     <img 
                       src={img} 
                       alt={`${work.title} デザイン ${index + 1}`}
-                      className="w-full"
+                      className="w-full cursor-pointer"
+                      onClick={() => window.open(img, '_blank')}
                     />
                   </div>
                 ))}

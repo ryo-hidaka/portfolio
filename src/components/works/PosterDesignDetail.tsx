@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Target, Code, Layout as LayoutIcon, Lightbulb, Brain, Image, Type, Globe, History, Eye, Heart, MessageSquare, ExternalLink, Cpu } from 'lucide-react';
+import { History, Eye, Type, Palette, Layout as LayoutIcon } from 'lucide-react';
 
 export function PosterDesignDetail() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,361 +35,154 @@ export function PosterDesignDetail() {
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">プロジェクト概要</h3>
           <span className="text-sm text-gray-500 tracking-widest">Overview</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Target className="w-6 h-6 text-blue-500" />
+            <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+              <History className="w-6 h-6 text-indigo-600" />
             </div>
-              <h4 className="font-semibold">プロジェクトの目的</h4>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h5 className="font-medium text-blue-800">歴史的建造物の物語性</h5>
-                <p className="text-sm text-gray-600">神秘性を視覚言語で表現し、好奇心を喚起</p>
+            <h4 className="font-semibold text-indigo-800">プロジェクトの目的</h4>
           </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h5 className="font-medium text-blue-800">情報設計</h5>
-                <p className="text-sm text-gray-600">展示会の本質的価値と情報の明確性を両立</p>
-            </div>
-            </div>
-          </div>
-          
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-purple-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Globe className="w-6 h-6 text-purple-500" />
-                    </div>
-              <h4 className="font-semibold">文化的融合</h4>
-                  </div>
-            <div className="space-y-4">
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h5 className="font-medium text-purple-800">東洋と西洋の融合</h5>
-                <p className="text-sm text-gray-600">縦書きタイポグラフィと西洋建築の統合</p>
-                </div>
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h5 className="font-medium text-purple-800">新たな美学</h5>
-                <p className="text-sm text-gray-600">異文化融合による戦略的ビジュアルコミュニケーション</p>
-              </div>
-            </div>
-          </div>
+          <p className="text-base text-gray-700 leading-relaxed text-justify">
+            架空の展示会「知られざるお城の悲劇展」のチラシデザインとして制作しました。歴史的建造物に秘められた物語と悲劇を紹介する展示会の魅力を、視覚的言語で表現することに挑戦。東洋と西洋の文化的要素を融合させ、神秘的な雰囲気と情報の明確さを両立させたデザインです。展示への期待感と好奇心を喚起するビジュアルコミュニケーションを目指しました。
+          </p>
         </div>
       </div>
 
-      {/* 視覚言語と文化的二元性 */}
+      {/* デザインコンセプト */}
       <div className="space-y-8">
         <div className={`transform transition-all duration-300 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">視覚言語と文化的二元性</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Visual Language & Cultural Duality</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">デザインコンセプト</h3>
+          <span className="text-sm text-gray-500 tracking-widest">Design Concept</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <History className="w-6 h-6 text-blue-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <History className="w-6 h-6 text-blue-600" />
             </div>
-              <h4 className="font-semibold">東西文化の対話的構成</h4>
+              <h4 className="font-semibold text-blue-800">東西文化の対話的構成</h4>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>直交する視覚軸：縦書きテキストと水平に広がる城の構図</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>文化的対比：和のタイポグラフィと洋の建築物の融合</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>時間軸の交差：古代日本と中世ヨーロッパの時間的交差</span>
-              </li>
-            </ul>
+            <p className="text-base text-gray-700 leading-relaxed">
+              日本語の縦書きタイポグラフィと西洋中世の城という異なる文化要素の統合により、新たな視覚体験を創出しました。直交する視覚軸（縦書きテキストと水平に広がる城の構図）が視覚的緊張感を生み出しています。
+            </p>
           </div>
           
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-purple-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Type className="w-6 h-6 text-purple-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <Eye className="w-6 h-6 text-purple-600" />
               </div>
-              <h4 className="font-semibold">階層的タイポグラフィ設計</h4>
+              <h4 className="font-semibold text-purple-800">神秘性と時間の隔たり</h4>
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>メインタイトル：「知られざるお城の悲劇展」の白色縦書き表記</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>視覚的強調：「お城」部分のゴールド処理による注目点創出</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>補足情報：展示詳細と説明文の適切な配置</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>欧文サイドノート：左余白に配置した英文テキスト</span>
-              </li>
-            </ul>
+            <p className="text-base text-gray-700 leading-relaxed">
+              霧に包まれた城の写真処理により、時間を超えた物語性と謎めいた雰囲気を演出。デジタル処理によって現実と非現実の境界を曖昧にし、展示内容への想像力を刺激します。
+            </p>
+          </div>
+          
+          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <Type className="w-6 h-6 text-green-600" />
+              </div>
+              <h4 className="font-semibold text-green-800">視覚的階層と注目点</h4>
+            </div>
+            <p className="text-base text-gray-700 leading-relaxed">
+              主要タイトルの「お城」部分をゴールドでハイライトすることで、視線の流れを誘導し情報の優先順位を明確に設計。暗色背景に映えるコントラストが記憶に残るデザイン要素となっています。
+            </p>
           </div>
         </div>
       </div>
 
-      {/* 情感デザインと心理的訴求 */}
+      {/* 色彩と構成要素 */}
       <div className="space-y-8">
         <div className={`transform transition-all duration-300 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">情感デザインと心理的訴求</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Emotional Design & Psychological Appeal</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">色彩と構成要素</h3>
+          <span className="text-sm text-gray-500 tracking-widest">Color & Composition</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-red-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Heart className="w-6 h-6 text-red-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <Palette className="w-6 h-6 text-amber-600" />
               </div>
-              <h4 className="font-semibold">視覚的物語性</h4>
+              <h4 className="font-semibold text-amber-800">色彩設計</h4>
             </div>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2" />
-                <span>霧がかった城：煙霧効果による神秘性と時間の隔たりの表現</span>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
+                <span>深い青紫のトーンによる歴史的重みと悲劇性の表現</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2" />
-                <span>暗色トーン：ダークブルーの色調による悲劇性と歴史の重みの示唆</span>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
+                <span>レンガ模様のフレームによる「過去への窓」の視覚化</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2" />
-                <span>光と影のコントラスト：城の上部に残る光と下部の暗さによる象徴的表現</span>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
+                <span>光と影のコントラストによる物語性と悲劇的要素の暗示</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2" />
-                <span>フレーム構造：レンガ模様の枠取りによる「過去への窓」としての機能</span>
-              </li>
-              </ul>
-          </div>
-          
+                    </ul>
+                  </div>
+
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-green-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Eye className="w-6 h-6 text-green-500" />
+              <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+                <LayoutIcon className="w-6 h-6 text-rose-600" />
               </div>
-              <h4 className="font-semibold">心理的没入感の設計</h4>
+              <h4 className="font-semibold text-rose-800">タイポグラフィ設計</h4>
             </div>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>謎の提示：「知られざる」という言葉と霧がかった視覚表現による好奇心喚起</span>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2" />
+                <span>「知られざるお城の悲劇展」の白色縦書きによる和の美意識表現</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>感情的予告：「悲劇」という言葉と全体の暗色調による感情的期待値の設定</span>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2" />
+                <span>「お城」部分のゴールド処理による展示テーマの強調</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>時間的区切り：明確な会期表示（2022.5.2-8）による限定性と希少価値の強調</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>サブテキスト：「秘められた悲劇の舞台が2022年、幕開けがれる」という物語的予告</span>
+              <li className="flex items-start gap-3 text-base text-gray-700">
+                <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2" />
+                <span>バイリンガル表記による国際的な視点の追加</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      {/* 技術的実装と情報設計 */}
+      {/* 技術的アプローチ */}
       <div className="space-y-8">
         <div className={`transform transition-all duration-300 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">技術的実装と情報設計</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Technical Implementation & Information Design</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">技術的アプローチ</h3>
+          <span className="text-sm text-gray-500 tracking-widest">Technical Approach</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Code className="w-6 h-6 text-blue-500" />
-              </div>
-              <h4 className="font-semibold">デジタルツールの戦略的活用</h4>
+            <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+              <LayoutIcon className="w-6 h-6 text-slate-600" />
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>Adobe Photoshop：城のビジュアルに対する雰囲気処理（煙霧効果、色調補正、粒状感）</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>Adobe Illustrator：精密なタイポグラフィ配置と文字間調整</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>レイヤーマスク：画像と背景の緻密な融合</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>黄金比：全体レイアウトの構築</span>
-              </li>
-                    </ul>
-                  </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-purple-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <LayoutIcon className="w-6 h-6 text-purple-500" />
-              </div>
-              <h4 className="font-semibold">実用的情報設計</h4>
-            </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>開催期間：中央下部に大きく視認性高く配置された日付（2022.5.2-8）</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>開館時間：ポスター下部に明記された時間帯（10:00-17:00）</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>休館日：必要情報として簡潔に示された休館情報（月曜日）</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2" />
-                <span>主催・後援：組織情報と問い合わせ先の適切な配置</span>
-              </li>
-            </ul>
+            <h4 className="font-semibold text-slate-800">デジタル処理とレイアウト</h4>
           </div>
+          <p className="text-base text-gray-700 leading-relaxed text-justify">
+            Adobe Photoshopを用いた城のビジュアル処理（霧効果、色調補正、テクスチャ）とAdobe Illustratorでのタイポグラフィ設計を組み合わせ、幻想的でありながら情報が明確に伝わるデザインに仕上げました。黄金比に基づくレイアウト構成により、視覚的調和と情報の流れを最適化。印刷媒体として効果的に機能するよう、視認性と印象の強さを両立させています。
+          </p>
         </div>
       </div>
 
-      {/* PMとしての統合的視点 */}
+      {/* デザインの成果と応用 */}
       <div className="space-y-8">
         <div className={`transform transition-all duration-300 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">PMとしての統合的視点</h3>
-          <span className="text-sm text-gray-500 tracking-widest">Integrated Perspective as PM</span>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-yellow-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Lightbulb className="w-6 h-6 text-yellow-500" />
-              </div>
-              <h4 className="font-semibold">コンセプト設計</h4>
-            </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2" />
-                <span>神秘的雰囲気という抽象概念をデジタルツールで具現化</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2" />
-                <span>異なる文化圏の悲劇という展示テーマの本質を視覚的に前景化</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-green-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Cpu className="w-6 h-6 text-green-500" />
-                      </div>
-              <h4 className="font-semibold">複数文化要素の統合</h4>
-                    </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>東洋と西洋、古代と中世、テキストとビジュアルという異種要素の調和</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2" />
-                <span>文化的対比を単なる美的実験ではなく戦略的選択として実装</span>
-              </li>
-            </ul>
-                  </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Brain className="w-6 h-6 text-blue-500" />
-              </div>
-              <h4 className="font-semibold">美的表現と機能的要件</h4>
-            </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>芸術表現を損なわずに必要情報を明確に伝える設計バランス</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                <span>実用性と芸術性のバランスを実現した統合デザイン</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* 成果と応用 */}
-      <div className="space-y-8">
-        <div className={`transform transition-all duration-300 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">成果と応用</h3>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">デザインの成果と応用</h3>
           <span className="text-sm text-gray-500 tracking-widest">Results & Applications</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <div className="flex items-center gap-4 mb-6">
-              <div className="bg-indigo-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <MessageSquare className="w-6 h-6 text-indigo-500" />
-              </div>
-              <h4 className="font-semibold">展示予告としての期待感</h4>
+            <div className="bg-white/50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
+              <Eye className="w-6 h-6 text-indigo-600" />
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                <span>展示内容の直接的説明ではなく、暗示と象徴による興味喚起</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2" />
-                <span>視覚的記憶点の創出による記憶への残存性の向上</span>
-              </li>
-            </ul>
-      </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-pink-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <Image className="w-6 h-6 text-pink-500" />
-        </div>
-              <h4 className="font-semibold">文化施設としてのブランド</h4>
-            </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-2" />
-                <span>学術性と芸術性を兼ね備えた文化イベントとしての品位確立</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-2" />
-                <span>独特の構図と色彩処理による記憶への残存性の向上</span>
-              </li>
-                    </ul>
-                  </div>
-
-          <div className={`bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-amber-50 p-4 rounded-lg transform transition-all duration-200 hover:rotate-12">
-                <ExternalLink className="w-6 h-6 text-amber-500" />
-              </div>
-              <h4 className="font-semibold">応用可能性</h4>
-            </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
-                <span>歴史的・文化的コンテンツを現代的文脈で再提示する視覚言語システム</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-gray-600">
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2" />
-                <span>デジタル展示、ウェブデザイン、出版物など多様なメディアへの応用</span>
-              </li>
-            </ul>
+            <h4 className="font-semibold text-indigo-800">デザインの成果</h4>
           </div>
+          <p className="text-base text-gray-700 leading-relaxed text-justify">
+            このチラシデザインは単なる情報伝達を超え、展示会の世界観を先取りして体験させる「体験の前触れ」として機能します。謎めいた視覚表現と「知られざる」という言葉の組み合わせが好奇心を喚起し、来場を促す効果的なビジュアルコミュニケーションを実現。このデザイン言語は、ウェブサイト、チケット、展示カタログなど関連する媒体にも一貫して応用できる視覚システムとして設計されています。
+          </p>
         </div>
       </div>
     </div>

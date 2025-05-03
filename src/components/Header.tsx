@@ -65,6 +65,10 @@ export function Header() {
               setIsWorksOpen(false);
               setIsAboutOpen(false);
               setIsMobileMenuOpen(false);
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
             }}
           >
             RYO
@@ -88,10 +92,10 @@ export function Header() {
               {isWorksOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 border border-gray-100">
                   <button
-                    onClick={() => scrollToSection('ai-development')}
+                    onClick={() => scrollToSection('graphic-design')}
                     className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
                   >
-                    AI Development
+                    Graphic Design
                   </button>
                   <button
                     onClick={() => scrollToSection('web-design')}
@@ -100,16 +104,16 @@ export function Header() {
                     Web Design
                   </button>
                   <button
-                    onClick={() => scrollToSection('graphic-design')}
-                    className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
-                  >
-                    Graphic Design
-                  </button>
-                  <button
                     onClick={() => scrollToSection('art')}
                     className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
                   >
                     Art
+                  </button>
+                  <button
+                    onClick={() => scrollToSection('ai-development')}
+                    className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
+                  >
+                    AI Development
                   </button>
                 </div>
               )}
@@ -136,22 +140,28 @@ export function Header() {
                     Profile
                   </button>
                   <button
+                    onClick={() => handleAboutItemClick('philosophy')}
+                    className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
+                  >
+                    Philosophy
+                  </button>
+                  <button
                     onClick={() => handleAboutItemClick('career')}
                     className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
                   >
                     Career
                   </button>
                   <button
-                    onClick={() => handleAboutItemClick('strength')}
+                    onClick={() => handleAboutItemClick('design-approach')}
                     className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
                   >
-                    Strength
+                    Design Approach
                   </button>
                   <button
-                    onClick={() => handleAboutItemClick('nine-pieces')}
+                    onClick={() => handleAboutItemClick('skills')}
                     className="w-full text-left px-4 py-2 hover:bg-gray-50 tracking-wider"
                   >
-                    9 Pieces
+                    Skills
                   </button>
                 </div>
               )}
@@ -253,6 +263,15 @@ export function Header() {
                   </button>
                   <button
                     onClick={() => {
+                      handleAboutItemClick('philosophy');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="block text-[#333333] hover:text-[#3366cc] transition-colors tracking-wider"
+                  >
+                    Philosophy
+                  </button>
+                  <button
+                    onClick={() => {
                       handleAboutItemClick('career');
                       setIsMobileMenuOpen(false);
                     }}
@@ -262,21 +281,21 @@ export function Header() {
                   </button>
                   <button
                     onClick={() => {
-                      handleAboutItemClick('strength');
+                      handleAboutItemClick('design-approach');
                       setIsMobileMenuOpen(false);
                     }}
                     className="block text-[#333333] hover:text-[#3366cc] transition-colors tracking-wider"
                   >
-                    Strength
+                    Design Approach
                   </button>
                   <button
                     onClick={() => {
-                      handleAboutItemClick('nine-pieces');
+                      handleAboutItemClick('skills');
                       setIsMobileMenuOpen(false);
                     }}
                     className="block text-[#333333] hover:text-[#3366cc] transition-colors tracking-wider"
                   >
-                    9 Pieces
+                    Skills
                   </button>
                 </div>
               )}
